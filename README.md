@@ -10,6 +10,6 @@
 2.  GitHub分享：拉取本仓库后，添加你的文件，发起GitHub的[pull request](https://help.github.com/articles/creating-a-pull-request/)
 
 # 相关链接
-SYSU_SDCS_Final_Exams(https://github.com/ConstHall/SYSU_SDCS_Final_Exams)
+[SYSU_SDCS_Final_Exams](https://github.com/ConstHall/SYSU_SDCS_Final_Exams)
 
-SYSU-Exam(https://github.com/sysuexam/SYSU-Exam)
+[SYSU-Exam](https://github.com/sysuexam/SYSU-Exam)
