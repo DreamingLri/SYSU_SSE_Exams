@@ -1,0 +1,724 @@
+<mxfile host="Electron" modified="2024-07-18T09:27:43.631Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="LU6DuTTIvcjEffNgEMPQ" version="24.2.5" type="device" pages="7">
+  <diagram id="XhyEGGIeyeuFzfKl0eeU" name="子系统之间的并发通信图">
+    <mxGraphModel dx="1937" dy="810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-10" value="" style="shape=process2;fixedSize=1;size=5;fontStyle=0;html=1;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="292.5" y="465" width="131" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-6" value="&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;lt;&amp;lt;subsystem&amp;gt;&amp;gt;&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;：后台管理子系统&lt;/span&gt;" style="shape=process2;fixedSize=1;size=5;fontStyle=0;html=1;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="283" y="460" width="131" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-8" value="&amp;lt;&amp;lt;input&amp;gt;&amp;gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;lt;&amp;lt;subsystem&amp;gt;&amp;gt;&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;：车速检测子系统&lt;/span&gt;" style="shape=process2;fixedSize=1;size=5;fontStyle=0;html=1;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="30" y="350" width="131" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-9" value="&amp;lt;&amp;lt;output&amp;gt;&amp;gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;lt;&amp;lt;subsystem&amp;gt;&amp;gt;&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;：车速显示&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;子系统&lt;/span&gt;" style="shape=process2;fixedSize=1;size=5;fontStyle=0;html=1;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="30" y="570" width="131" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-11" value="&amp;lt;&amp;lt;external output device&amp;gt;&amp;gt;&lt;br&gt;：车速检测器" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-270" y="570" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-12" value="&amp;lt;&amp;lt;external input device&amp;gt;&amp;gt;&lt;br&gt;：车速检测器" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-270" y="350" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-13" value="&amp;lt;&amp;lt;external user&amp;gt;&amp;gt;&lt;br&gt;：后台管理员键盘显示器" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="273.5" y="120" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-14" value="&amp;lt;&amp;lt;external service&amp;gt;&amp;gt;&lt;br&gt;：短信发送系统" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="640" y="620" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-15" value="&amp;lt;&amp;lt;external service&amp;gt;&amp;gt;&lt;br&gt;：教职工信息系统" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="640" y="460" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-16" value="&amp;lt;&amp;lt;external service&amp;gt;&amp;gt;&lt;br&gt;：外来车辆报备系统" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="640" y="300" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-20" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="a6O0ktGnuzLCAw97fX3g-6" target="a6O0ktGnuzLCAw97fX3g-13" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="490" as="sourcePoint" />
+            <mxPoint x="290" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-21" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="a6O0ktGnuzLCAw97fX3g-6" target="a6O0ktGnuzLCAw97fX3g-16" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="490" as="sourcePoint" />
+            <mxPoint x="290" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-22" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="a6O0ktGnuzLCAw97fX3g-6" target="a6O0ktGnuzLCAw97fX3g-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="490" as="sourcePoint" />
+            <mxPoint x="290" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-23" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="a6O0ktGnuzLCAw97fX3g-6" target="a6O0ktGnuzLCAw97fX3g-14" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="490" as="sourcePoint" />
+            <mxPoint x="290" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-24" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="a6O0ktGnuzLCAw97fX3g-8" target="a6O0ktGnuzLCAw97fX3g-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="490" as="sourcePoint" />
+            <mxPoint x="290" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-25" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="a6O0ktGnuzLCAw97fX3g-6" target="a6O0ktGnuzLCAw97fX3g-9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="490" as="sourcePoint" />
+            <mxPoint x="290" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-26" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="a6O0ktGnuzLCAw97fX3g-12" target="a6O0ktGnuzLCAw97fX3g-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="490" as="sourcePoint" />
+            <mxPoint x="290" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-27" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="a6O0ktGnuzLCAw97fX3g-11" target="a6O0ktGnuzLCAw97fX3g-9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="490" as="sourcePoint" />
+            <mxPoint x="290" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-29" value="" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="330" y="200" as="sourcePoint" />
+            <mxPoint x="330" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6O0ktGnuzLCAw97fX3g-30" value="管理员操作" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="240" y="210" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-1" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;dashed=1;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="370" y="250" as="sourcePoint" />
+            <mxPoint x="370" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-2" value="信息显示" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="379" y="210" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-3" value="" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="560" y="360" as="sourcePoint" />
+            <mxPoint x="620" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-4" value="请求报备信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="530" y="290" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-5" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;dashed=1;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="630" y="350" as="sourcePoint" />
+            <mxPoint x="570" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-6" value="返回报备信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="600" y="370" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-8" value="" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="550" y="470" as="sourcePoint" />
+            <mxPoint x="620" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-9" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;dashed=1;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="620" y="501" as="sourcePoint" />
+            <mxPoint x="550" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-10" value="请求教职工信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="540" y="435" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-11" value="返回教职工信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="540" y="510" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-15" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="570" y="580" as="sourcePoint" />
+            <mxPoint x="630" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-16" value="发送短信" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="580" y="570" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-18" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-100" y="360" as="sourcePoint" />
+            <mxPoint x="-30" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-19" value="检测车速" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-105" y="330" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-20" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="210" y="390" as="sourcePoint" />
+            <mxPoint x="270" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-21" value="车速检测记录" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="220" y="380" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-22" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="250" y="500" as="sourcePoint" />
+            <mxPoint x="190" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-23" value="车速信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="150" y="498" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-24" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-30" y="585" as="sourcePoint" />
+            <mxPoint x="-90" y="585" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-25" value="显示车速" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-90" y="555" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yI2eF-uFjokfaQwamxXU-26" value="&lt;span style=&quot;text-align: center;&quot;&gt;&amp;lt;&amp;lt;software system&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;text-align: center;&quot;&gt;：校园超速监控系统&lt;/div&gt;" style="html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=default;labelBackgroundColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-20" y="280" width="530" height="390" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="gvE-_mBbioG4sYmotFxr" name="修改超速次数限制并发通信图">
+    <mxGraphModel dx="1110" dy="810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a9WajZIRhmK6kwZC80qB-1" value="&lt;div&gt;&amp;lt;&amp;lt;event drive&amp;gt;&amp;gt;&lt;/div&gt;&amp;lt;&amp;lt;user interaction&amp;gt;&amp;gt;&lt;br&gt;：后台管理员用户交互" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="440" y="190" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a9WajZIRhmK6kwZC80qB-5" value="&lt;div&gt;&amp;lt;&amp;lt;event drive&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&amp;lt;&amp;lt;external user&amp;gt;&amp;gt;&lt;br&gt;：后台管理员键盘显示器" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="110" y="190" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="64DB7dCDhP9xE3cWKves-1" value="&lt;div&gt;&amp;lt;&amp;lt;demand&amp;gt;&amp;gt;&lt;/div&gt;&amp;lt;&amp;lt;business logic&amp;gt;&amp;gt;&lt;br&gt;：调整超速次数限制业务逻辑" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="435" y="370" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="64DB7dCDhP9xE3cWKves-2" value="&amp;lt;&amp;lt;database wrapper&amp;gt;&amp;gt;&lt;br&gt;：超速次数限制" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="450" y="550" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="64DB7dCDhP9xE3cWKves-3" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="a9WajZIRhmK6kwZC80qB-5" target="a9WajZIRhmK6kwZC80qB-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="450" as="sourcePoint" />
+            <mxPoint x="410" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64DB7dCDhP9xE3cWKves-4" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="64DB7dCDhP9xE3cWKves-1" target="a9WajZIRhmK6kwZC80qB-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="450" as="sourcePoint" />
+            <mxPoint x="410" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64DB7dCDhP9xE3cWKves-5" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="64DB7dCDhP9xE3cWKves-2" target="64DB7dCDhP9xE3cWKves-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="450" as="sourcePoint" />
+            <mxPoint x="410" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hfrOM53CcGfH6zEF-vsg-1" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="310" y="190" as="sourcePoint" />
+            <mxPoint x="380" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hfrOM53CcGfH6zEF-vsg-2" value="1.管理员输入" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="305" y="150" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hfrOM53CcGfH6zEF-vsg-3" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="540" y="270" as="sourcePoint" />
+            <mxPoint x="540" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hfrOM53CcGfH6zEF-vsg-6" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="490" y="330" as="sourcePoint" />
+            <mxPoint x="490" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hfrOM53CcGfH6zEF-vsg-7" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="239" as="sourcePoint" />
+            <mxPoint x="311" y="239" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hfrOM53CcGfH6zEF-vsg-8" value="2.修超速次数限制请求(in 超速次数限制)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="550" y="278" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7PKnCvkbDOmXShZ6VpDN-1" value="" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="540" y="460" as="sourcePoint" />
+            <mxPoint x="540" y="530" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xtpu7AetbFl_ApD7ZtmQ-1" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;dashed=1;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="490" y="530" as="sourcePoint" />
+            <mxPoint x="490" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xtpu7AetbFl_ApD7ZtmQ-2" value="3.更新超速次数限制(in 超速次数限制，out 修改状态)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="550" y="480" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xtpu7AetbFl_ApD7ZtmQ-3" value="4.返回修改状态" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="370" y="480" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xtpu7AetbFl_ApD7ZtmQ-4" value="5.展示修改状态" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="370" y="288" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xtpu7AetbFl_ApD7ZtmQ-5" value="6.展示修改状态" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="295" y="248" width="110" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="zGsbGQJg-iNfkEjkXus1" name="修改超速次数限制接口">
+    <mxGraphModel dx="1110" dy="810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nDVrHYWlAw_DDTDhPMo9-3" value="&lt;div&gt;&amp;lt;&amp;lt;demand&amp;gt;&amp;gt;&lt;br&gt;&lt;/div&gt;&amp;lt;&amp;lt;business logic&amp;gt;&amp;gt;&lt;br&gt;：调整超速次数限制业务逻辑类" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=60;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="600" y="150" width="310" height="110" as="geometry">
+            <mxRectangle x="210" y="530" width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nDVrHYWlAw_DDTDhPMo9-6" value="&lt;p style=&quot;line-height: 80%;&quot;&gt;&lt;span style=&quot;text-align: center; text-wrap: nowrap; background-color: initial;&quot;&gt;+ 更新超速次数限制（in 超速次数限制，out 修改状态）&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="nDVrHYWlAw_DDTDhPMo9-3" vertex="1">
+          <mxGeometry y="60" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-1" value="&lt;div&gt;&amp;lt;&amp;lt;event drive&amp;gt;&amp;gt;&lt;/div&gt;&amp;lt;&amp;lt;user interaction&amp;gt;&amp;gt;&lt;br&gt;：后台管理员用户交互" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="150" y="30" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-2" value="&lt;div&gt;&amp;lt;&amp;lt;demand&amp;gt;&amp;gt;&lt;/div&gt;&amp;lt;&amp;lt;business logic&amp;gt;&amp;gt;&lt;br&gt;：调整超速次数限制业务逻辑" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="145" y="210" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-3" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;：系统数据" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="160" y="390" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-4" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="cKnDzeILro4NwIpAQ4Eo-2" target="cKnDzeILro4NwIpAQ4Eo-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="290" as="sourcePoint" />
+            <mxPoint x="120" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-5" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="cKnDzeILro4NwIpAQ4Eo-3" target="cKnDzeILro4NwIpAQ4Eo-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="290" as="sourcePoint" />
+            <mxPoint x="120" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-6" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="250" y="110" as="sourcePoint" />
+            <mxPoint x="250" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-7" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="200" y="170" as="sourcePoint" />
+            <mxPoint x="200" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-8" value="修超速次数限制请求(in 超速次数限制)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="265" y="118" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-9" value="" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="250" y="300" as="sourcePoint" />
+            <mxPoint x="250" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-10" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;dashed=1;" parent="1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="200" y="370" as="sourcePoint" />
+            <mxPoint x="200" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-11" value="更新超速次数限制(in 超速次数限制，out 修改状态)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="265" y="320" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-12" value="返回修改状态" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="85" y="320" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnDzeILro4NwIpAQ4Eo-13" value="展示修改状态" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="85" y="128" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="wQIy9Lh9wD8CUuKOqxol" name="查看报表并发通信图">
+    <mxGraphModel dx="1110" dy="810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-1" value="&lt;div&gt;&amp;lt;&amp;lt;event drive&amp;gt;&amp;gt;&lt;/div&gt;&amp;lt;&amp;lt;external user&amp;gt;&amp;gt;&lt;div&gt;：后台管理员键盘显示器&lt;/div&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="100" y="110" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-2" value="&lt;div&gt;&amp;lt;&amp;lt;event drive&amp;gt;&amp;gt;&lt;/div&gt;&amp;lt;&amp;lt;user interaction&amp;gt;&amp;gt;&lt;br&gt;：后台管理员用户交互" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="420" y="110" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-3" value="&lt;div&gt;&amp;lt;&amp;lt;demand&amp;gt;&amp;gt;&lt;/div&gt;&amp;lt;&amp;lt;business logic&amp;gt;&amp;gt;&lt;br&gt;：查看报表业务逻辑" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="420" y="330" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-4" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="OMXdpk02SWI3X1P3sgtU-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="134.5" as="sourcePoint" />
+            <mxPoint x="390" y="134.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-5" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="OMXdpk02SWI3X1P3sgtU-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="494.40999999999997" y="390" as="sourcePoint" />
+            <mxPoint x="494.40999999999997" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-6" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="300" y="120" as="sourcePoint" />
+            <mxPoint x="370" y="120" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-7" value="1.管理员点击&quot;查看报表&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="261" y="90" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-8" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="520" y="190" as="sourcePoint" />
+            <mxPoint x="520" y="300" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-9" value="2.发送查看报表请求" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" y="230" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-10" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;lt;&amp;lt;subsystem&amp;gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;：后台管理系统" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="420" y="550" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-11" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="495.09" y="550" as="sourcePoint" />
+            <mxPoint x="494.49999999999994" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-12" value="3.发送查看报表请求" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" y="448" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-13" value="" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="519" y="398" as="sourcePoint" />
+            <mxPoint x="519" y="528" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-14" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="470" y="523" as="sourcePoint" />
+            <mxPoint x="470" y="403" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-15" value="4.返回报表" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="380" y="448" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-16" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="470" y="300" as="sourcePoint" />
+            <mxPoint x="470" y="190" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-17" value="5.显示报表" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="380" y="238" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-18" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="370.5" y="150" as="sourcePoint" />
+            <mxPoint x="301.5" y="150" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OMXdpk02SWI3X1P3sgtU-19" value="6.显示报表" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="300" y="150" width="80" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="S8_kIsufgXHSzT78n2Qb" name="查看报表接口">
+    <mxGraphModel dx="1110" dy="810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-1" value="&lt;div&gt;&amp;lt;&amp;lt;event drive&amp;gt;&amp;gt;&lt;/div&gt;&amp;lt;&amp;lt;user interaction&amp;gt;&amp;gt;&lt;br&gt;：后台管理员用户交互" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="326" y="110" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-2" value="&lt;div&gt;&amp;lt;&amp;lt;demand&amp;gt;&amp;gt;&lt;/div&gt;&amp;lt;&amp;lt;business logic&amp;gt;&amp;gt;&lt;br&gt;：查看报表业务逻辑" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="326" y="330" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-3" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="nzcQP-dbtP1blB6NiyBL-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400.40999999999997" y="390" as="sourcePoint" />
+            <mxPoint x="400.40999999999997" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-4" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="426" y="190" as="sourcePoint" />
+            <mxPoint x="426" y="300" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-5" value="发送查看报表请求" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="431" y="230" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-6" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;lt;&amp;lt;subsystem&amp;gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;：后台管理系统" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="326" y="550" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-7" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="401.09" y="550" as="sourcePoint" />
+            <mxPoint x="400.49999999999994" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-8" value="发送查看报表请求" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="431" y="448" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-9" value="" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="425" y="398" as="sourcePoint" />
+            <mxPoint x="425" y="528" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-10" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="376" y="523" as="sourcePoint" />
+            <mxPoint x="376" y="403" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-11" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="376" y="300" as="sourcePoint" />
+            <mxPoint x="376" y="190" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-12" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;显示报表&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="291" y="238" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-13" value="返回报表" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="305" y="448" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-14" value="&amp;lt;&amp;lt;demand&amp;gt;&amp;gt;&lt;div&gt;&amp;lt;&amp;lt;business logic&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;查看报表业务逻辑类&lt;/b&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="110" width="140" height="110" as="geometry">
+            <mxRectangle x="640" y="290" width="150" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nzcQP-dbtP1blB6NiyBL-15" value="+ 初始化()&lt;div&gt;+&amp;nbsp;获取报表(in 单位名称, in 时间, out 报表)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nzcQP-dbtP1blB6NiyBL-14">
+          <mxGeometry y="50" width="140" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="k1hiJ0OAps1pcXe6YCTt" name="修改安全车速并发通信图">
+    <mxGraphModel dx="1110" dy="810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-1" value="&lt;div&gt;&amp;lt;&amp;lt;event drive&amp;gt;&amp;gt;&lt;br&gt;&lt;/div&gt;&amp;lt;&amp;lt;external user&amp;gt;&amp;gt;&lt;br&gt;：后台管理员键盘显示器" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="110" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-2" value="&lt;div&gt;&amp;lt;&amp;lt;event drive&amp;gt;&amp;gt;&lt;br&gt;&lt;/div&gt;&amp;lt;&amp;lt;user interaction&amp;gt;&amp;gt;&lt;br&gt;：后台管理员用户交互" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="310" y="110" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-3" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="pBQEkXIZdFisQmA_QwUI-1" target="pBQEkXIZdFisQmA_QwUI-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="300" as="sourcePoint" />
+            <mxPoint x="300" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-4" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="pBQEkXIZdFisQmA_QwUI-5">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="220" y="120" as="sourcePoint" />
+            <mxPoint x="290" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-5" value="1.管理员输入" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="90" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-6" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="290" y="150" as="sourcePoint" />
+            <mxPoint x="210" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-7" value="8.展示修改状态" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="205" y="160" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-8" value="&lt;div&gt;&amp;lt;&amp;lt;demand&amp;gt;&amp;gt;&lt;br&gt;&lt;/div&gt;&amp;lt;&amp;lt;business logic&amp;gt;&amp;gt;&lt;br&gt;：修改安全车速业务逻辑" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="310" y="280" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-9" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="pBQEkXIZdFisQmA_QwUI-8" target="pBQEkXIZdFisQmA_QwUI-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="300" as="sourcePoint" />
+            <mxPoint x="270" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-10" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="400" y="180" as="sourcePoint" />
+            <mxPoint x="400" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-11" value="2.修改安全车速请求(in 安全车速)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="210" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-12" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="370" y="260" as="sourcePoint" />
+            <mxPoint x="370" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-13" value="7.显示修改状态" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="210" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-14" value="&lt;div&gt;&amp;lt;&amp;lt;data wrapper&amp;gt;&amp;gt;&lt;/div&gt;：安全车速" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="310" y="440" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-15" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="pBQEkXIZdFisQmA_QwUI-14" target="pBQEkXIZdFisQmA_QwUI-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="300" as="sourcePoint" />
+            <mxPoint x="410" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-16" value="3.更新安全车速(in 安全车速, out 修改状态)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="370" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-17" value="" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="400" y="350" as="sourcePoint" />
+            <mxPoint x="400" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-18" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="370" y="420" as="sourcePoint" />
+            <mxPoint x="370" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-19" value="4.返回修改状态" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="370" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-20" value="&lt;div&gt;&amp;lt;&amp;lt;demand&amp;gt;&amp;gt;&lt;br&gt;&lt;/div&gt;&amp;lt;&amp;lt;output&amp;gt;&amp;gt;&lt;br&gt;：车速显示接口" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-21" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="pBQEkXIZdFisQmA_QwUI-20" target="pBQEkXIZdFisQmA_QwUI-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="230" as="sourcePoint" />
+            <mxPoint x="460" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-22" value="" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="290" y="320" as="sourcePoint" />
+            <mxPoint x="210" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-23" value="5.显示安全车速(in 安全车速, out 修改状态)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="185" y="330" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-24" value="6.返回修改状态" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="250" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pBQEkXIZdFisQmA_QwUI-25" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="210" y="290" as="sourcePoint" />
+            <mxPoint x="290" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="OwjUb_y94CSgpF2FRRDO" name="修改安全车速接口">
+    <mxGraphModel dx="1110" dy="810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="coaIKL-3KRBD4cxzCgen-1" value="&lt;div&gt;&amp;lt;&amp;lt;event drive&amp;gt;&amp;gt;&lt;br&gt;&lt;/div&gt;&amp;lt;&amp;lt;user interaction&amp;gt;&amp;gt;&lt;br&gt;：后台管理员用户交互" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="160" y="100" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-2" value="&lt;div&gt;&amp;lt;&amp;lt;demand&amp;gt;&amp;gt;&lt;br&gt;&lt;/div&gt;&amp;lt;&amp;lt;business logic&amp;gt;&amp;gt;&lt;br&gt;：修改安全车速业务逻辑" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="160" y="270" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-3" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="coaIKL-3KRBD4cxzCgen-2" target="coaIKL-3KRBD4cxzCgen-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="290" as="sourcePoint" />
+            <mxPoint x="120" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-4" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="250" y="170" as="sourcePoint" />
+            <mxPoint x="250" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-5" value="修改安全车速请求(in 安全车速)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="200" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-6" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="220" y="250" as="sourcePoint" />
+            <mxPoint x="220" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-7" value="显示修改状态" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="200" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-8" value="&lt;div&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/div&gt;：系统数据" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="160" y="435" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-9" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="coaIKL-3KRBD4cxzCgen-8" target="coaIKL-3KRBD4cxzCgen-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="245" y="415" as="sourcePoint" />
+            <mxPoint x="245" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-10" value="更新安全车速(in 安全车速, out 修改状态)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="365" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-11" value="" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="250" y="345" as="sourcePoint" />
+            <mxPoint x="250" y="415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-12" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="219" y="415" as="sourcePoint" />
+            <mxPoint x="219" y="345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="coaIKL-3KRBD4cxzCgen-13" value="返回修改状态" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="365" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4MY2dn9PyEr5tGW-dIqy-1" value="&amp;lt;&amp;lt;demand&amp;gt;&amp;gt;&lt;div&gt;&amp;lt;&amp;lt;business logic&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;修改安全车速业务逻辑类&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="240" width="250" height="90" as="geometry">
+            <mxRectangle x="640" y="290" width="150" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4MY2dn9PyEr5tGW-dIqy-2" value="&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;text-align: center; background-color: initial;&quot;&gt;更新安全车速(in 安全车速, out 修改状态)&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="4MY2dn9PyEr5tGW-dIqy-1">
+          <mxGeometry y="50" width="250" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
